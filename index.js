@@ -1,7 +1,7 @@
-const { createInvoice } = require("./createInvoice.js");
+const pdf  = import('@ssmale/invoice-generator');
 
 const invoice = {
-  date: '2024-11-30',
+  date: '2024-12-01',
   customer: {
     name: "The Change Mavericks",
     addressLine1:"1 Cedar Office Park",
@@ -12,107 +12,13 @@ const invoice = {
   },
   items: [
     {
-      description: "Toner Cartridge",
-      quantity: 2,
-      amount: 6000
-    },
-    {
-      description: "USB Cable Extender",
+      description: "MDC Website Support Retainer",
       quantity: 1,
-      amount: 2000
-    },
-    {
-      description: "USB Cable Extender",
-      quantity: 1,
-      amount: 2000
-    },
-    {
-      description: "USB Cable Extender",
-      quantity: 1,
-      amount: 2000
-    },
-    {
-      description: "USB Cable Extender",
-      quantity: 1,
-      amount: 2000
-    },
-    {
-      description: "USB Cable Extender",
-      quantity: 1,
-      amount: 2000
-    },
-    {
-      description: "USB Cable Extender",
-      quantity: 1,
-      amount: 2000
-    },
-    {
-      description: "USB Cable Extender",
-      quantity: 1,
-      amount: 2000
-    },
-    {
-      description: "USB Cable Extender",
-      quantity: 1,
-      amount: 2000
-    },
-    {
-      description: "USB Cable Extender",
-      quantity: 1,
-      amount: 2000
-    },
-    {
-      description: "USB Cable Extender",
-      quantity: 1,
-      amount: 2000
-    },
-    {
-      description: "USB Cable Extender",
-      quantity: 1,
-      amount: 2000
-    },
-    {
-      description: "USB Cable Extender",
-      quantity: 1,
-      amount: 2000
-    },
-    {
-      description: "USB Cable Extender",
-      quantity: 1,
-      amount: 2000
-    },
-    {
-      description: "USB Cable Extender",
-      quantity: 1,
-      amount: 2000
-    },
-    {
-      description: "USB Cable Extender",
-      quantity: 1,
-      amount: 2000
-    },
-    {
-      description: "USB Cable Extender",
-      quantity: 1,
-      amount: 2000
-    },
-    {
-      description: "USB Cable Extender",
-      quantity: 1,
-      amount: 2000
-    },
-    {
-      description: "USB Cable Extender",
-      quantity: 1,
-      amount: 2000
-    },
-    {
-      description: "USB Cable Extender",
-      quantity: 1,
-      amount: 2000
+      amount: 27500
     }
   ],
-  invoice_nr: 12534
+  invoice_nr: 'CM008'
 };
 
-createInvoice(invoice, "invoice.pdf");
+pdf.then(x =>     x.default(invoice, `${invoice.invoice_nr}.pdf`)
+)
