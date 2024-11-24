@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@ssmale/invoice-generator": "^1.0.3",
+    "@ssmale/invoice-generator": "^1.0.1",
     "nodemon": "^3.1.7"
   }
 }
