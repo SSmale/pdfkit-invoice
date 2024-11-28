@@ -17,7 +17,7 @@ const invoice = {
       amount: 27500
     }
   ],
-  invoice_nr: 'CM008'
+  invoice_nr: 'CM010'
 };
 
 pdf.then(x =>     x.default(invoice, `${invoice.invoice_nr}.pdf`)
