@@ -1,7 +1,7 @@
 const pdf  = import('@ssmale/invoice-generator');
 
 const invoice = {
-  date: '2024-12-01',
+  date: '2025-01-01',
   customer: {
     name: "The Change Mavericks",
     addressLine1:"1 Cedar Office Park",
